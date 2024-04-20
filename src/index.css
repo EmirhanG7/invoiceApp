@@ -107,7 +107,7 @@ body {
         outline: none;
         border: none;
         color: #fff;
-        background-image: url("images/plus-icon.svg");
+        background-image: url("/images/plus-icon.svg");
         background-repeat: no-repeat;
         background-position: left 8px center;
         background-color: #7C5DFA;
