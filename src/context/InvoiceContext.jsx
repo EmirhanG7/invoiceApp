@@ -57,6 +57,10 @@ export function InvoiceProvider({ children }) {
     };
 
     const calculatePaymentDue = (invoiceDate, paymentTerms) => {
+        if (isNaN(new Date(invoiceDate))) {
+            return;
+        }
+
         let date = new Date(invoiceDate);
 
         let daysToAdd;

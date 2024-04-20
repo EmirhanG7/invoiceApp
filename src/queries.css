@@ -1,0 +1,141 @@
+@media (width <= 820px) {
+
+    .container {
+        grid-template-columns: calc(100% - 80px);
+        margin-left: 0;
+        margin-block: 144px;
+        padding: 0;
+    }
+
+
+    .sideBarContainer {
+        width: 100%;
+        height: 80px;
+        top: 0;
+        left: 0;
+        background-color: #252945;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 0;
+        border-radius: 0;
+
+        > img {
+            width: 80px;
+        }
+    }
+    .sideBarBottom {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        align-items: center;
+        width: auto;
+        margin-right: 32px;
+        & span {
+            width: 0;
+            height: 80px;
+            border: 1px solid #494E6E;
+        }
+    }
+
+    .goBackBtn {
+        margin: 0 0 32px;
+    }
+
+    .invoiceFormOutline {
+        top: 80px;
+        height: calc(100vh - 80px);
+        padding: 56px 32px 0;
+    }
+
+    .formActive {
+        & .invoiceFormOutline {
+            margin: 0;
+        }
+    }
+}
+
+/* tablet end */
+
+/* mobile start */
+
+@media (width <= 550px) {
+
+    .container {
+        grid-template-columns: calc(100% - 48px);
+        margin: 105px 0;
+    }
+
+    .formActive {
+        & .invoiceFormOutline {
+            width: 100%;
+        }
+    }
+
+    .invoice {
+        /*grid-template-columns: repeat(3, 1fr) .4fr repeat(2, .8fr);*/
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        padding: 30px 20px;
+        align-items: center;
+        background-color: #fff;
+        border-radius: 8px;
+        transition: transform .15s ease-in;
+
+        & h3 {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 15px;
+            letter-spacing: -0.25px;
+            text-transform: uppercase;
+
+            & span {
+                color: #7E88C3;
+            }
+        }
+    }
+
+    .invoicesHeader {
+        margin-bottom: 32px;
+
+        .logo {
+            flex: 1;
+            & h1 {
+                font-size: 24px;
+            }
+        }
+    }
+
+
+    .invoicesControl {
+        justify-content: flex-end;
+        gap: 24px;
+        flex: 3;
+        .btn {
+            padding: 17px 17px 17px 48px;
+
+           & span {
+                display: none;
+           }
+        }
+    }
+
+    .filterLabel span {
+        display: none;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        width: 100%;
+        padding-block: 24px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}

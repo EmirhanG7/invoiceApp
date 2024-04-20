@@ -27,7 +27,6 @@ export default function Detail() {
     return (
         <>
             <EditInvoice />
-            <h1>detay sayfası</h1>
             <Link className='goBackBtn' to={"/"}><img src="/images/Path2.svg" alt='go-back-icon'/> Go Back </Link>
 
             <div className="invoiceDetail">

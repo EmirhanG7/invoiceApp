@@ -20,12 +20,14 @@ export default function InvoiceForm() {
         formObj.paymentDue = calculatePaymentDue(formObj.invoiceDate, formObj.paymentTerms);
         formObj.items = itemRows;
         formObj.amount = calculateAmount(itemRows);
-        setInvoices(prev => [formObj, ...prev]);
+        setInvoices(prev => {
+            if (!Array.isArray(prev) || prev === null) {
+                return [formObj];
+            }
+            return [formObj, ...prev];
+        });
         handleFormQuit()
     }
-
-
-
 
     return (
         <>
@@ -44,15 +46,15 @@ export default function InvoiceForm() {
                             <div className="address2">
                                 <div className="city">
                                     <p>City</p>
-                                    <input type="text" name="billFromCity" placeholder="City"/>
+                                    <input type="text" name="billFromCity" />
                                 </div>
                                 <div className="postCode">
                                     <p>Post Code</p>
-                                    <input type="text" name="billFromPostCode" placeholder="Post Code"/>
+                                    <input type="text" name="billFromPostCode" />
                                 </div>
                                 <div className="country">
                                     <p>Country</p>
-                                    <input type="text" name="billFromCountry" placeholder="Country"/>
+                                    <input type="text" name="billFromCountry" />
                                 </div>
                             </div>
                         </div>

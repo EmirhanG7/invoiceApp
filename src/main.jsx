@@ -1,6 +1,7 @@
 import { createRoot } from 'react-dom/client';
 import './reset.css';
 import './index.css';
+import './queries.css';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import MainLayout from "./layout/MainLayout.jsx";
 import HomePage from "./pages/HomePage.jsx";

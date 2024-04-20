@@ -7,7 +7,7 @@ import EmptyList from "../components/EmptyList.jsx";
 export default function HomePage() {
     const { invoices, setInvoiceDetails, setItemRows, filteredStatus, handleFilterChange, handleForm, statuses } = useContext(InvoiceContext);
 
-    const filteredInvoices = invoices.filter(invoice => {
+    const filteredInvoices = (invoices || []).filter(invoice => {
         if(filteredStatus.includes("all")) {
             return invoice;
         } else {
@@ -33,7 +33,7 @@ export default function HomePage() {
                     </div>
                     <div className="invoicesControl">
                         <div className="dropdownMenu">
-                            <label className='filterLabel' htmlFor="filter">filter by status</label>
+                            <label className='filterLabel' htmlFor="filter">filter <span>by status</span></label>
                             <input type="checkbox" id='filter'/>
                             <img src="/images/arrow-icon.svg" alt=""/>
 
@@ -49,7 +49,7 @@ export default function HomePage() {
                                 ))}
                             </ul>
                         </div>
-                        <button onClick={handleForm} className="btn">New Invoice</button>
+                        <button onClick={handleForm} className="btn">New <span>Invoice</span></button>
                     </div>
                 </div>
                 <div className="invoicesList">
