@@ -1,3 +1,4 @@
+/* tablet start */
 @media (width <= 820px) {
 
     .container {
@@ -11,13 +12,7 @@
     .sideBarContainer {
         width: 100%;
         height: 80px;
-        top: 0;
-        left: 0;
-        background-color: #252945;
-        display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
         padding-bottom: 0;
         border-radius: 0;
 
@@ -26,10 +21,7 @@
         }
     }
     .sideBarBottom {
-        display: flex;
         flex-direction: row;
-        gap: 32px;
-        align-items: center;
         width: auto;
         margin-right: 32px;
         & span {
@@ -70,18 +62,13 @@
     .formActive {
         & .invoiceFormOutline {
             width: 100%;
+            height: calc(100vh - 200px);
         }
     }
 
     .invoice {
-        /*grid-template-columns: repeat(3, 1fr) .4fr repeat(2, .8fr);*/
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns: repeat(2, 1fr);
-        padding: 30px 20px;
-        align-items: center;
-        background-color: #fff;
-        border-radius: 8px;
-        transition: transform .15s ease-in;
 
         & h3 {
             font-size: 15px;
@@ -139,3 +126,5 @@
     }
 
 }
+
+/* mobile end */
