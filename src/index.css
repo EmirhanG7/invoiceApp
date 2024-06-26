@@ -438,7 +438,6 @@ input[type="checkbox"]:checked + label + span {
     z-index: 1;
     width: 1%;
     height: 100vh;
-    transition: all 0.3s ease;
     visibility: hidden;
 }
 
